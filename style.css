@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+   background-color: rgba(241, 247, 244, 0.847);
+   font-family: 'Arial', sans-serif;
+   color: #001414;
+   line-height: 1.6;
+   margin-top: 120px;
+  
+}
+
+/* barre de navigation */
+
+.nav {
+    width: 100%;
+    height: auto;
+    background-color: #002F2F; 
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+    padding: 5px;
+}
+
+/* Logo */
+
+.nav img {
+    align-self: center;
+    width: 20%;
+}  
+.nav-logo {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Boutons */
+.nav-button {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-button li {
+    list-style: none;
+}
+
+.nav-button li a {
+    text-decoration: none;
+    padding: 10px 20px; 
+    color: #EBFFFF;
+    border: 2px solid #EBFFFF; 
+    border-radius: 5px; 
+    font-family: "Stardos Stencil", system-ui;
+    transition: all 0.3s ease; 
+}
+
+.nav-button li a:hover {
+    color: white; /* survol */
+    background-color: rgba(174, 137, 76, 0.2); /* Arrière-plan semi-transparent */
+    color: #FFFFFF; 
+}
+
+.nav-button li a.nav-active {
+    border-color: #fff;
+    background-color: rgba(174, 137, 76, 0.5); /* Couleur plus prononcée */
+    color: #FFFFFF;
+}
+
+/* Premiere Section */
+#welcom {
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 800px;
+    background-image: url(accueil.png);
+    background-position: 745px 50px;
+    background-size: 45%;
+    background-repeat: no-repeat;
+    
+
+}
+h1, h2 {
+    color: #005252;
+    font-family: "Stardos Stencil", system-ui;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding: 45px;
+}
+
+#avantages {
+    font-family: "Stardos Stencil", system-ui;
+    font-size: 1.5rem;
+    margin-top: -530px;
+    margin-left: 123px;
+}
+
+.slogan {
+    font-family: "Smooch Sans", sans-serif;
+    font-size: 2rem;
+    padding: 15px;
+    margin-top: -40px;
+    text-align: center;
+}
+
+.slogan-icon {
+
+    width: 4%;
+}
+/* Deuxième Section */
+
+#servisss {
+    margin-top: 150px;
+}
+
+.cartesCont {
+    display: flex;
+    justify-content: space-around;
+
+}
+.cartes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 430px;
+    height: 520px;
+    border-color: #001414;
+    border-style: ridge;
+    border-radius: 9px;
+    background-color: rgba(249, 249, 249, 0.515);
+    
+}
+
+.cartes h3 {
+    font-family: "Smooch Sans", sans-serif;
+    font-size: 1.3rem;
+    padding: 7px;
+    text-align: center;
+}
+.descript {
+
+    padding: 20px;
+    font-style: italic;
+
+}
+
+.picture {
+    width: 70%;
+    object-fit:fill; 
+    margin-left: 60px;
+    margin-bottom: 20px;
+}
+
+
+.btnAction {
+    position: fixed;
+    display: flex;
+    gap: 20px;
+    bottom: 25px;
+    left: 30px;
+    margin-bottom: 60px;
+    background: #ffffff;
+    background: linear-gradient(319deg, #ffffff 0%, #e3d6ee 40%, #b5d7df 80%);
+    background: -webkit-linear-gradient(319deg, #ffffff 0%, #e3d6ee 40%, #b5d7df 80%);
+    background: -moz-linear-gradient(319deg, #ffffff 0%, #e3d6ee 40%, #b5d7df 80%);
+    font-family: "Smooch Sans", sans-serif;
+    color: #4f4f4f;
+    font-size: 2rem;
+    padding: 5px 12px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    z-index: 20;
+}
+
+.btnAction:hover {
+    transform: scale(1.1); /* Agrandit légèrement au survol */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Ombre plus prononcée */
+}
+
+.btnAction-icon {
+    
+   display: block; 
+   width: 51px;
+}
+
+
+
+
+
+
+
+
+
+footer {
+    background: linear-gradient(to bottom, #4f4f4f 0%, #002F2F 100%);
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    border-top: 5px solid #002F2F;
+}
