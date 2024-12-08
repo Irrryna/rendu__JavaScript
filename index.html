@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gwendolyn:wght@400;700&family=Lavishly+Yours&family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">
@@ -22,7 +24,7 @@
             <ul class="nav-button">
                 <li><a href="#welcom">Accueil</a></li>
                 <li><a href="#servisss">Services</a></li>
-                <li><a href="#temoignages">Temoignages</a></li>
+                <li><a href="#temoinnn">Temoignages</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -33,38 +35,37 @@
 
     <section id=servisss></section>
 
-    <section id=temoinnn> </section>
+    <section id="temoinnn">
+        <div class="temoinCont"></div>
+    </section>
 
 
     <script src="script.js"></script>
 
+  
     <footer id="contact">
-        <div class="footer-grid-container">
+        <div class="footer-content">
+            <p>© 2024 Plombiers à Vélo - Tous droits réservés</p>
             <div class="footer-grid">
-                <h2><img src="pin.png">Lyon, France </h2>
-                <ul>
-                    <li><img src="icn-git.png">  </li>
-                    <li><img src="icn-linkedin.png">  </li>
-                    <li><img src="icn-mail.png">  </li> 
-                    <li><img src="icn-phone.png"> 06.06.48.48.06</li>
-                </ul>
+                <div class="contact-section">
+                    <p>Pour nous écrire un message :</p>
+                    <form action="#" method="post" class="contact-form">
+                        <input type="text" name="name" id="name" placeholder="Votre nom et prénom" required>
+                        <input type="email" name="email" id="email" placeholder="Votre adresse e-mail" required>
+                        <textarea name="message" id="guest-message" placeholder="Rédigez votre message" rows="4" required></textarea>
+                        <button type="submit">Envoyer</button>
+                    </form>
+                </div>
+                <div class="map-section">
+                    <p>Retrouvez-nous :</p>
+                    <div id="map"></div>
+                </div>
             </div>
-            <div class="footer-grid">
-                <p><a class="google-maps" target="_blank"></a></p>
-            </div>
-
-            <div class="footer-grid">
-                <p> Pour nous écrire un message :</p>
-                <form action="#" method="post" class="contact-form">
-                    <input type="text" name="name" id="name" placeholder="Votre nom et prénom" required>
-                    <input type="email" name="email" id="email" placeholder="Votre adresse e-mail" required>
-                    <textarea name="message" id="guest-message" placeholder="Rédigez votre message" rows="4" required></textarea>
-                    <button type="submit">Envoyer</button>
-                </form>
-            </div>
-
+            <p>Conçu avec ❤️ par l'équipe Plombiers à Vélo</p>
         </div>
-        
     </footer>
+    
+    
+    
 </body>
 </html>

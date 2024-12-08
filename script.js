@@ -73,44 +73,72 @@ fetch('https://js-dynamic-portfolio-data-makerslab-emlyon-cdweb-8f83155c64a0cc.g
        
     });
     
-    // section 3 - temoignages
+// section trois "Temoignages"
+let temoin = document.getElementById("temoinnn");
 
-    let temoin = document.getElementById ("temoinnn");
-    // création de h2    
-    let h3 = document.createElement("h2");
-    h3.textContent ="Temoignages de nos clients";
-    temoin.appendChild(h3);
 
-    let temoinSection = document.createElement("temoinCont");
-    temoin.appendChild (temoinSection);
-    temoinSection.className = "temoinCont";
+let h3 = document.createElement("h2");
+h3.textContent = "Témoignages de nos clients";
+temoin.appendChild(h3);
 
-    data.temoignages.forEach(element => {
+// + section conteneur
+let temoinSection = document.createElement("div");
+temoinSection.className = "temoinCont";
+temoin.appendChild(temoinSection);
 
-        let nom = document.createElement ("h4");
-        nom.className="prenomClient";
-        nom.textContent = element.prenom;
-        temoinSection.appendChild(nom);
+// Boucle sur les témoignages
+data.temoignages.forEach((element, index) => {
+    
+    let temoinItem = document.createElement("div");
+    temoinItem.className = "temoinItem";
 
-        let intervention = document.createElement ("h5");
-        intervention.className="intervention";
-        intervention.textContent = element.typeIntervention;
-        temoinSection.appendChild(intervention);
+    // avatar et prénom
+    let avatarAndName = document.createElement("div");
+    avatarAndName.className = "avatarAndName";
+    avatarAndName.innerHTML = `
+        <img src="avatar${index + 1}.png" alt="Avatar de ${element.prenom}" class="avatar">
+        <h4 class="prenomClient">${element.prenom}</h4>
+    `;
+    temoinItem.appendChild(avatarAndName);
 
-        let commentaire = document.createElement ("p");
-        commentaire.className="commentaireClient";
-        commentaire.textContent = element.commentaire;
-        temoinSection.appendChild(commentaire);
+    
+    let intervention = document.createElement("h5");
+    intervention.className = "intervention";
+    intervention.textContent = element.typeIntervention;
+    temoinItem.appendChild(intervention);
 
-        let note = document.createElement ("p");
-        note.className="noteClient";
-        note.textContent = `Je vous donne la note de  ${element.note} sur 5 `;
-        temoinSection.appendChild (note);
+    
+    let commentaire = document.createElement("p");
+    commentaire.className = "commentaireClient";
+    commentaire.textContent = element.commentaire;
+    temoinItem.appendChild(commentaire);
 
-        
-    });
+    let note = document.createElement("p");
+    note.className = "noteClient";
+    note.textContent = `Je vous donne la note de ${element.note} sur 5`;
+    temoinItem.appendChild(note);
+
+    temoinSection.appendChild(temoinItem);
+});
    
        
     })
     
     .catch(error => console.error('Error:', error));
+
+
+    // carte Leaflet
+
+ document.addEventListener("DOMContentLoaded", () => {
+    var map = L.map('map').setView([45.7485, 4.8467], 13);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    L.marker([45.7485, 4.8467]).addTo(map)
+        .bindPopup('Les plombiers sont ici!')
+        .openPopup();
+});
+
+

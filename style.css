@@ -63,18 +63,11 @@ body {
 }
 
 .nav-button li a:hover {
-    color: white; /* survol */
-    background-color: rgba(174, 137, 76, 0.2); /* Arrière-plan semi-transparent */
-    color: #FFFFFF; 
+    color: white;
+    background-color: #17A195;
 }
 
-.nav-button li a.nav-active {
-    border-color: #fff;
-    background-color: rgba(174, 137, 76, 0.5); /* Couleur plus prononcée */
-    color: #FFFFFF;
-}
-
-/* Premiere Section */
+/* Premiere Section "Accueil" */
 #welcom {
     margin-left: 20px;
     margin-right: 20px;
@@ -120,7 +113,7 @@ h2 {
 
     width: 4%;
 }
-/* Deuxième Section */
+/* Deuxième Section "SERVICES" */
 
 #servisss {
     margin-top: 150px;
@@ -168,9 +161,9 @@ h2 {
 .btnAction {
     position: fixed;
     display: flex;
-    gap: 20px;
-    bottom: 25px;
-    left: 30px;
+    gap: 10px; 
+    bottom: 230px;
+    left: 10px;
     margin-bottom: 60px;
     background: #ffffff;
     background: linear-gradient(319deg, #ffffff 0%, #e3d6ee 40%, #b5d7df 80%);
@@ -178,33 +171,110 @@ h2 {
     background: -moz-linear-gradient(319deg, #ffffff 0%, #e3d6ee 40%, #b5d7df 80%);
     font-family: "Smooch Sans", sans-serif;
     color: #4f4f4f;
-    font-size: 2rem;
-    padding: 5px 12px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-size: 1.5rem; 
+    padding: 8px 15px; 
+    border-radius: 8px; 
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); 
     transition: transform 0.3s, box-shadow 0.3s;
     z-index: 20;
 }
 
 .btnAction:hover {
-    transform: scale(1.1); /* Agrandit légèrement au survol */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Ombre plus prononcée */
+    transform: scale(1.05); 
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3); 
 }
 
 .btnAction-icon {
-    
-   display: block; 
-   width: 51px;
+    width: 40px;
 }
 
 
+/* Troisieme section "Témoignages" */
+#temoinnn {
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    text-align: center;
+}
 
+#temoinnn h2 {
+    font-family: "Stardos Stencil", system-ui;
+    font-size: 2.5rem;
+    color: #005252;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
 
+.temoinCont {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+}
 
+.temoinItem {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
 
+.avatarAndName {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
 
+/* Avatar */
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    
+    border: 2px solid #005252;
+}
 
+.prenomClient {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #001414;
+    margin: 10px 0 5px;
+    font-family: "Smooch Sans", sans-serif;
+}
 
+.intervention {
+    font-size: 1.2rem;
+    color: #4f4f4f;
+    margin: 5px 0;
+    font-style: italic;
+}
+
+.commentaireClient {
+    font-size: 1rem;
+    color: #002F2F;
+    margin: 10px 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.4;
+    padding: 0 10px;
+}
+
+.noteClient {
+    font-size: 0.9rem;
+    color: #3d2fd4;
+    font-weight: bold;
+    margin: 5px 0 15px;
+}
+
+.temoinCont > * {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.temoinCont > *:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
 footer {
     background: linear-gradient(to bottom, #4f4f4f 0%, #002F2F 100%);
     color: white;
@@ -213,4 +283,80 @@ footer {
     padding: 20px 0;
     margin-top: 40px;
     border-top: 5px solid #002F2F;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.footer-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.contact-section {
+    max-width: 400px;
+    text-align: left;
+}
+
+.contact-section p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.contact-form button {
+    padding: 10px;
+    background-color: #005252;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #008080;
+}
+
+.map-section {
+    max-width: 400px;
+    text-align: left;
+}
+
+.map-section p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#map {
+    width: 500px;
+    height: 220px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
